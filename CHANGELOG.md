@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added help text to FormField.vue [[#7](https://github.com/outl1ne/nova-table-field/pull/7)]
+- Added help text to FormField.vue [[#7](https://github.com/Lancodev/nova-table-field/pull/7)]
 
 ### Changed
 

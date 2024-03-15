@@ -1,6 +1,6 @@
 <?php
 
-namespace Outl1ne\NovaTableField;
+namespace Lancodev\NovaTableField;
 
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\Number;

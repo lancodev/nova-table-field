@@ -1,22 +1,25 @@
 <template>
-  <div class="flex items-center key-value-item">
-    <div class="flex flex-grow border-b border-50 key-value-fields">
+  <div class="bg-gray-100 dark:bg-gray-800 rounded-t-lg flex items-center key-value-item border-b border-gray-200 dark:border-gray-700">
+    <div class="flex flex-grow key-value-fields">
       <div
+        :class="{
+            'bg-white dark:bg-gray-800': rowIndex > 0,
+          }"
         :key="`column-${index}`"
         @click="handleColumnFieldFocus(index)"
-        class="flex-grow border-l border-50"
+        class="flex-grow"
         v-for="(cell, index) in row.cells"
       >
         <textarea
           :class="{
-            'bg-white': !isEditable,
-            'hover:bg-20 focus:bg-white': isEditable,
+            'bg-white dark:bg-gray-800': rowIndex > 0,
+            'border-l border-gray-200 dark:border-gray-700': index > 0,
           }"
           :disabled="!isEditable"
           :dusk="`key-value-value-${index}`"
           :key="cell.id"
           @focus="handleColumnFieldFocus(index)"
-          class="font-mono text-sm block min-h-input w-full form-control form-input form-input-row py-4 text-90 min-h-full"
+          class="block min-h-input w-full min-h-full bg-clip dark:bg-gray-800 uppercase font-bold text-xxs text-gray-500 tracking-wide px-3 py-2"
           ref="columnFields"
           v-model="row.cells[index]"
         />
@@ -43,7 +46,7 @@ import autosize from 'autosize';
 
 export default {
   props: {
-    index: Number,
+    rowIndex: Number,
     row: Object,
     disabled: {
       type: Boolean,
@@ -60,6 +63,7 @@ export default {
   },
 
   mounted() {
+    console.log(this.rowIndex)
     autosize(this.$refs.columnFields);
   },
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Outl1ne\NovaTableField;
+namespace Lancodev\NovaTableField;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;

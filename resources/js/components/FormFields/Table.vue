@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-30 bg-clip border border-60" :class="{ 'mr-12': editMode && canDelete }">
+  <div class="relative rounded-lg rounded-b-lg bg-gray-100 dark:bg-gray-800 bg-clip border border-gray-200 dark:border-gray-700 overflow-hidden" :class="{ 'mr-12': editMode && canDelete }">
     <slot />
   </div>
 </template>
